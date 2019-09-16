@@ -10,7 +10,7 @@
  */
 
 /*
- * Copyright (c) 2017, Joyent, Inc.
+ * Copyright 2019 Joyent, Inc.
  */
 
 /*
@@ -247,13 +247,13 @@ cfga_ccid_fill_info(const uccid_cmd_status_t *ucs, char *buf, size_t len)
 	uint_t bits = CCID_CLASS_F_TPDU_XCHG | CCID_CLASS_F_SHORT_APDU_XCHG |
 	    CCID_CLASS_F_EXT_APDU_XCHG;
 
-	if ((ucs->ucs_status & UCCID_STATUS_F_PRODUCT_VALID) != NULL) {
+	if ((ucs->ucs_status & UCCID_STATUS_F_PRODUCT_VALID) != 0) {
 		product = ucs->ucs_product;
 	} else {
 		product = "<unknown>";
 	}
 
-	if ((ucs->ucs_status & UCCID_STATUS_F_SERIAL_VALID) != NULL) {
+	if ((ucs->ucs_status & UCCID_STATUS_F_SERIAL_VALID) != 0) {
 		serial = ucs->ucs_serial;
 	} else {
 		serial = "<unknown>";
