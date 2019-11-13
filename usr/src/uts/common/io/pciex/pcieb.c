@@ -587,7 +587,7 @@ pcieb_attach(dev_info_t *devi, ddi_attach_cmd_t cmd)
 
 	(void) pcie_hpintr_enable(devi);
 
-	(void) pcie_link_bw_enable(devi);
+	// (void) pcie_link_bw_enable(devi);
 
 	/* Do any platform specific workarounds needed at this time */
 	pcieb_plat_attach_workaround(devi);
